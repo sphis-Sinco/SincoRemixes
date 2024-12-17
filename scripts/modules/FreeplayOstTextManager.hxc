@@ -1,0 +1,54 @@
+import flixel.FlxG;
+import flixel.text.FlxText;
+import flixel.FlxState;
+
+import funkin.util.Constants;
+
+import funkin.Conductor;
+import funkin.Paths;
+
+import funkin.ui.mainmenu.MainMenuState;
+import funkin.ui.freeplay.FreeplayState;
+import funkin.ui.AtlasMenuItem;
+
+import funkin.modding.base.ScriptedMusicBeatState;
+import funkin.modding.module.Module;
+
+class FreeplayOstTextManager extends Module
+{
+	public function new()
+	{
+		// Create a module with the ID 'freeplay-ost-text-manager'
+		super('freeplay-ost-text-manager');
+	}
+
+	public var freeplay:Bool = false;
+	public var freeplayState:FlxState;
+
+	/**
+	 * Event called after changing to a new state.
+	 */
+	public function onStateChangeEnd(event:StateChangeScriptEvent)
+	{
+		freeplay = (Std.isOfType(event.targetState, FreeplayState));
+			
+		if (freeplay){ trace("UNOFFICIAL OST, MUST FIND IT."); freeplayState = event.targetState; }
+	}
+
+	public var unofficialSongList:Array<String> = ['approval'];
+	
+	public function onUpdate(event:UpdateScriptEvent)
+	{
+		if (freeplay && freeplayState != null)
+		{
+			freeplayState.ostName.text = "OFFICIAL OST";
+
+			for (song in unofficialSongList)
+			{
+				trace("UNOFFICIAL OST SONG: "+song);
+				if (grpCapsules.members[curSelected].songText.text.toLowerCase() == song.toLowerCase())
+					freeplayState.ostName.text = "UNOFFICIAL OST";
+			}
+		}
+	}
+}
