@@ -2,3 +2,4 @@ FNF: Sinco Remixes v0.1 (Proof Of Concept version)
 - Added New Song: Approval
 - Added New Album: Week 1
 - Added Mod Version Label to MainMenuState
+- Replaced IntroText
