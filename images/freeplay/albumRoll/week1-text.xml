@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="week1-text.png">
+	<!-- Created with Adobe Animate version 20.5.0.29329 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="idle0000" x="4" y="4" width="187" height="86"/>
+	<SubTexture name="idle0001" x="4" y="4" width="187" height="86"/>
+	<SubTexture name="idle0002" x="4" y="4" width="187" height="86"/>
+	<SubTexture name="idle0003" x="4" y="4" width="187" height="86"/>
+	<SubTexture name="idle0004" x="4" y="4" width="187" height="86"/>
+	<SubTexture name="idle0005" x="4" y="4" width="187" height="86"/>
+	<SubTexture name="idle0006" x="4" y="4" width="187" height="86"/>
+	<SubTexture name="idle0007" x="4" y="4" width="187" height="86"/>
+	<SubTexture name="switch0000" x="4" y="98" width="187" height="87"/>
+	<SubTexture name="switch0001" x="4" y="98" width="187" height="87"/>
+	<SubTexture name="switch0002" x="4" y="98" width="187" height="87"/>
+	<SubTexture name="switch0003" x="4" y="98" width="187" height="87"/>
+</TextureAtlas>

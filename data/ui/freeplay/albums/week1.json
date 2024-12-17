@@ -1,0 +1,7 @@
+{
+  "version": "1.0.0",
+  "name": "Week 1",
+  "artists": ["Sinco"],
+  "albumArtAsset": "freeplay/albumRoll/week1",
+  "albumTitleAsset": "freeplay/albumRoll/week1-text"
+}

@@ -12,22 +12,17 @@
     "altVocals": {    }
   },
   "playData": {
-    "songVariations": [    ],
-    "difficulties": [
-      "normal"
-    ],
+    "album": "week1",
+    "songVariations": [],
+    "difficulties": ["normal"],
     "characters": {
       "player": "bf",
       "girlfriend": "gf",
       "opponent": "dad",
       "instrumental": "",
-      "altInstrumentals": [      ],
-      "opponentVocals": [
-        "dad"
-      ],
-      "playerVocals": [
-        "bf"
-      ]
+      "altInstrumentals": [],
+      "opponentVocals": ["dad"],
+      "playerVocals": ["bf"]
     },
     "stage": "mainStageErect",
     "noteStyle": "funkin",

@@ -14,6 +14,8 @@ import funkin.modding.module.Module;
 
 class ModVersionText extends Module
 {
+	public var VERSION:String = "0.1 (P.O.C.)";
+
 	// yoinked script from this
 	// https://x.com/EliteMasterEric/status/1785766434959745516/video/1
 
@@ -33,7 +35,7 @@ class ModVersionText extends Module
 			// We are moving into the main menu.
 			trace("Mod Version Text for Main Menu");
 
-			event.targetState.rightWatermarkText.text = 'Sinco Remixes v0.1';
+			event.targetState.rightWatermarkText.text = 'Sinco Remixes v'+VERSION;
 			// event.targetState.leftWatermarkText.y -= 18; // was gonna be on the left watermark text
 		}
 	}
