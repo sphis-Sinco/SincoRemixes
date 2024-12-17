@@ -23,8 +23,8 @@ class ModVersionText extends Module
 
 	public function new()
 	{
-		// Create a module with the ID 'mod-version-text'
-		super('mod-version-text');
+		// Create a module with the ID 'watermark-texts'
+		super('watermark-texts');
 	}
 
 	public var modSongs:Array<String> = ['approval'];
@@ -34,15 +34,28 @@ class ModVersionText extends Module
 	 */
 	public function onStateChangeEnd(event:StateChangeScriptEvent)
 	{
+		var curSong:String = '';
+		var curDiff:String = '';
+
 		var gameplay:Bool = Std.isOfType(event.targetState, PlayState);
+
 		var mainmenu:Bool = Std.isOfType(event.targetState, MainMenuState);
+
+		if (gameplay)
+		{
+			curSong = PlayState.instance.currentSong.songName;
+			curDiff = PlayState.instance.currentDifficulty;
+		}
+		
+		var gameplay_watermark:Bool = gameplay && modSongs.contains(curSong.toLowerCase());
 
 		if (mainmenu || gameplay)
 		{
 			// We are moving into the main menu.
 			trace("Mod Version Text");
 
-			if (mainmenu || (gameplay && modSongs.contains(PlayState.instance.currentSong.songName.toLowerCase()))) event.targetState.rightWatermarkText.text = 'Sinco Remixes v'+VERSION;
+			if (mainmenu || gameplay_watermark) event.targetState.rightWatermarkText.text = 'Sinco Remixes v'+VERSION;
+			if (gameplay_watermark) event.targetState.leftWatermarkText.text = curSong + ' - '+curDiff;
 		}
 	}
 }
