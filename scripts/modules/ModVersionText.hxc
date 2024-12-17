@@ -1,0 +1,40 @@
+import flixel.FlxG;
+import flixel.text.FlxText;
+
+import funkin.util.Constants;
+
+import funkin.Conductor;
+import funkin.Paths;
+
+import funkin.ui.mainmenu.MainMenuState;
+import funkin.ui.AtlasMenuItem;
+
+import funkin.modding.base.ScriptedMusicBeatState;
+import funkin.modding.module.Module;
+
+class ModVersionText extends Module
+{
+	// yoinked script from this
+	// https://x.com/EliteMasterEric/status/1785766434959745516/video/1
+
+	public function new()
+	{
+		// Create a module with the ID 'mod-version-text'
+		super('mod-version-text');
+	}
+
+	/**
+	 * Event called after changing to a new state.
+	 */
+	public function onStateChangeEnd(event:StateChangeScriptEvent)
+	{
+		if (Std.isOfType(event.targetState, MainMenuState))
+		{
+			// We are moving into the main menu.
+			trace("Mod Version Text for Main Menu");
+
+			event.targetState.rightWatermarkText.text = 'Sinco Remixes v0.1';
+			// event.targetState.leftWatermarkText.y -= 18; // was gonna be on the left watermark text
+		}
+	}
+}
