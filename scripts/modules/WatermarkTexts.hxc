@@ -36,6 +36,7 @@ class ModVersionText extends Module
 	{
 		var curSong:String = '';
 		var curDiff:String = '';
+		var curVari:String = '';
 
 		var gameplay:Bool = Std.isOfType(event.targetState, PlayState);
 
@@ -43,10 +44,11 @@ class ModVersionText extends Module
 
 		if (gameplay)
 		{
-			curSong = PlayState.instance.currentSong.songName;
+			curVari = PlayState.instance.currentVariation;
+			curSong = PlayState.instance.currentSong.songName + (curVari.toLowerCase() != 'default' ? '-'+curVari : '');
 			curDiff = PlayState.instance.currentDifficulty;
 		}
-		
+
 		var gameplay_watermark:Bool = gameplay && modSongs.contains(curSong.toLowerCase());
 
 		if (mainmenu || gameplay)
@@ -55,7 +57,7 @@ class ModVersionText extends Module
 			trace("Mod Version Text");
 
 			if (mainmenu || gameplay_watermark) event.targetState.rightWatermarkText.text = 'Sinco Remixes v'+VERSION;
-			if (gameplay_watermark) event.targetState.leftWatermarkText.text = curSong + ' - '+curDiff;
+			if (gameplay) event.targetState.leftWatermarkText.text = curSong + ' - '+curDiff;
 		}
 	}
 }
