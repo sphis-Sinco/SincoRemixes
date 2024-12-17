@@ -1,5 +1,7 @@
 FNF: Sinco Remixes
 v0.1.1 - 12/17/2024
+- Added Mod Version Text to PlayState (only if it is one of the modded songs)
+
 v0.1 (Proof Of Concept version) - 12/17/2024
 - Added New Song: Approval
 - Added New Album: Week 1

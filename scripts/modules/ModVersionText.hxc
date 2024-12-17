@@ -6,6 +6,8 @@ import funkin.util.Constants;
 import funkin.Conductor;
 import funkin.Paths;
 
+import funkin.play.PlayState;
+
 import funkin.ui.mainmenu.MainMenuState;
 import funkin.ui.AtlasMenuItem;
 
@@ -25,18 +27,22 @@ class ModVersionText extends Module
 		super('mod-version-text');
 	}
 
+	public var modSongs:Array<String> = ['approval'];
+
 	/**
 	 * Event called after changing to a new state.
 	 */
 	public function onStateChangeEnd(event:StateChangeScriptEvent)
 	{
-		if (Std.isOfType(event.targetState, MainMenuState))
+		var gameplay:Bool = Std.isOfType(event.targetState, PlayState);
+		var mainmenu:Bool = Std.isOfType(event.targetState, MainMenuState);
+
+		if (mainmenu || gameplay)
 		{
 			// We are moving into the main menu.
-			trace("Mod Version Text for Main Menu");
+			trace("Mod Version Text");
 
-			event.targetState.rightWatermarkText.text = 'Sinco Remixes v'+VERSION;
-			// event.targetState.leftWatermarkText.y -= 18; // was gonna be on the left watermark text
+			if (mainmenu || (gameplay && modSongs.contains(PlayState.instance.currentSong.songName.toLowerCase()))) event.targetState.rightWatermarkText.text = 'Sinco Remixes v'+VERSION;
 		}
 	}
 }
