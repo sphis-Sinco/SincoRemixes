@@ -1,5 +1,6 @@
 FNF: Sinco Remixes
-v0.1 (Proof Of Concept version)
+v0.1.1 - 12/17/2024
+v0.1 (Proof Of Concept version) - 12/17/2024
 - Added New Song: Approval
 - Added New Album: Week 1
 - Added Mod Version Label to MainMenuState

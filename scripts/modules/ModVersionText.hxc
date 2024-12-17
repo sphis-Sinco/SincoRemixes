@@ -14,7 +14,7 @@ import funkin.modding.module.Module;
 
 class ModVersionText extends Module
 {
-	public var VERSION:String = "0.1 (P.O.C.)";
+	public var VERSION:String = "0.1.1";
 
 	// yoinked script from this
 	// https://x.com/EliteMasterEric/status/1785766434959745516/video/1
