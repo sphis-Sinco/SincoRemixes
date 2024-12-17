@@ -14,7 +14,7 @@
   "playData": {
     "album": "week1",
     "songVariations": [],
-    "difficulties": ["normal"],
+    "difficulties": ["normal", "hard", "easy"],
     "characters": {
       "player": "bf",
       "girlfriend": "gf",
@@ -27,9 +27,9 @@
     "stage": "mainStageErect",
     "noteStyle": "funkin",
     "ratings": {
-      "easy": 0,
-      "normal": 10,
-      "hard": 0
+      "easy": 8,
+      "hard": 12,
+      "normal": 10
     },
     "previewStart": 0,
     "previewEnd": 0
