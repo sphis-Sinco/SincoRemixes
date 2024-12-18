@@ -63,11 +63,11 @@
       "t": 13178.5714285714,
       "e": "FocusCamera",
       "v": {
-	"duration": 4,
 	"x": 0,
-	"y": 0,
+	"duration": 4,
+	"y": -100,
 	"char": 2,
-	"ease": "expoInOut"
+	"ease": "linear"
 }
     },
     {
@@ -191,6 +191,30 @@
 }
     },
     {
+      "t": 51428.5714285714,
+      "e": "SetCameraBop",
+      "v": {
+	"rate": 1,
+	"intensity": 2
+}
+    },
+    {
+      "t": 53142.8571428571,
+      "e": "SetCameraBop",
+      "v": {
+	"rate": 4,
+	"intensity": 1
+}
+    },
+    {
+      "t": 54857.1428571429,
+      "e": "SetCameraBop",
+      "v": {
+	"rate": 1,
+	"intensity": 2
+}
+    },
+    {
       "t": 54857.1428571429,
       "e": "FocusCamera",
       "v": {
@@ -199,6 +223,22 @@
 	"y": 0,
 	"ease": "INSTANT",
 	"char": 0
+}
+    },
+    {
+      "t": 56571.4285714286,
+      "e": "SetCameraBop",
+      "v": {
+	"rate": 4,
+	"intensity": 1
+}
+    },
+    {
+      "t": 58285.7142857143,
+      "e": "SetCameraBop",
+      "v": {
+	"rate": 1,
+	"intensity": 2
 }
     },
     {
@@ -220,6 +260,14 @@
 	"ease": "sineOut",
 	"mode": "stage",
 	"zoom": 1
+}
+    },
+    {
+      "t": 61714.2857142857,
+      "e": "SetCameraBop",
+      "v": {
+	"rate": 4,
+	"intensity": 1
 }
     },
     {
