@@ -4,7 +4,7 @@ v0.1.1 (LATEST) - 12/18/2024
 - Added the Kade Engine Song Name + Difficulty Text/Watermark (bottom left)
 - Added Mod Credits to Mod Menu
 - Changed Dad vocals on Approval
-- Changed some Camera Events on Approval
+- Changed/Added some Camera Events on Approval
 
 v0.1 (Proof Of Concept version) - 12/17/2024
 - Added New Song: Approval
