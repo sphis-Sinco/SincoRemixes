@@ -1,0 +1,54 @@
+import flixel.FlxG;
+import flixel.text.FlxText;
+
+import funkin.util.Constants;
+
+import funkin.Conductor;
+import funkin.Paths;
+
+import funkin.play.PlayState;
+
+import funkin.ui.credits.CreditsState;
+// import funkin.ui.credits.CreditsData;
+import funkin.ui.credits.CreditsDataHandler;
+import funkin.ui.mainmenu.MainMenuState;
+import funkin.ui.AtlasMenuItem;
+
+import funkin.modding.base.ScriptedMusicBeatState;
+import funkin.modding.module.Module;
+
+class CreditsText extends Module
+{
+	public function new()
+	{
+		// Create a module with the ID 'credits-text'
+		super('credits-text');
+	}
+
+	public var modSongs:Array<String> = ['approval'];
+
+	/**
+	 * Event called after changing to a new state.
+	 */
+	public function onStateChangeEnd(event:StateChangeScriptEvent)
+	{
+		var credits:Bool = Std.isOfType(event.targetState, CreditsState);
+        var coolCreds:Dynamic = {
+                    header: 'Sincos Remixes Team',
+                    body: [
+                        {line: 'Sinco - Composer, Charter, Coder'},
+                        {line: 'Djotta Flow - Artist, Animator'},
+                    ]
+                };
+        var creditsData:Dynamic = CreditsDataHandler.CREDITS_DATA.entries;
+
+		if (credits)
+        {
+            trace('MOD CREDITS WEEEE');
+
+           if (creditsData[0] != coolCreds) CreditsDataHandler.CREDITS_DATA.entries.insert(0, coolCreds);
+
+            // trace(CreditsDataHandler.CREDITS_DATA);
+        }
+	}
+}

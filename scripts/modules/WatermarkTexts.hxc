@@ -14,7 +14,7 @@ import funkin.ui.AtlasMenuItem;
 import funkin.modding.base.ScriptedMusicBeatState;
 import funkin.modding.module.Module;
 
-class ModVersionText extends Module
+class WatermarkText extends Module
 {
 	public var VERSION:String = "0.1.1";
 
